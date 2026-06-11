@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>파이프 드림</title>
+  <link rel="stylesheet" href="pipe_dream.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">평면도형 이동 응용하기</p>
+      <h1>파이프 드림</h1>
+      <p class="description">
+        시작점 S에서 도착점 G까지 파이프를 연결하세요.
+        물이 흐르기 시작하면 더 이상 파이프를 놓을 수 없고,
+        물이 G에 정확히 도착해야 성공입니다.
+      </p>
+    </header>
+
+    <section class="game-card">
+      <canvas id="gameCanvas" width="360" height="360" aria-label="파이프 드림 게임 판"></canvas>
+
+      <div class="panel">
+        <div id="nextPipe" class="next-pipe"></div>
+        <div id="timer" class="timer"></div>
+        <div id="msg" class="message"></div>
+
+        <div class="actions">
+          <button id="startFlowBtn" type="button">💧 물 흘리기</button>
+          <button id="resetBtn" type="button">🔄 새 게임</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="pipe_dream.js"></script>
+</body>
+</html>

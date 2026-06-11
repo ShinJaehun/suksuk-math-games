@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>러시아워 퍼즐</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">도형 밀기</p>
+      <h1>러시아워</h1>
+      <p class="description">
+        자동차는 자기 방향으로만 움직일 수 있습니다. 다른 차를 뛰어넘을 수 없고,
+        빨간 자동차가 EXIT 밖으로 완전히 빠져나가야 다음 단계로 넘어갑니다.
+      </p>
+      <button id="resetBtn" type="button">🔄 <span id="level"></span>단계 다시 하기</button>
+    </header>
+
+    <section class="board-wrap">
+      <div id="board" aria-label="러시아워 퍼즐 판"></div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

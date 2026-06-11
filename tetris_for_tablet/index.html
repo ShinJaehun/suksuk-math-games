@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>테트리스</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <p class="eyebrow">도형 돌리기 · 뒤집기</p>
+      <h1>테트리스</h1>
+      <p class="description">떨어지는 블록을 좌우로 움직이고 회전해서 줄을 꽉 채우세요. 시간이 지날수록 블록이 점점 빨리 떨어집니다.</p>
+    </section>
+
+    <section class="hud" aria-live="polite">
+      <div class="hud-card"><span>점수</span><strong id="score">0</strong></div>
+      <div class="hud-card"><span>줄</span><strong id="lines">0</strong></div>
+      <div class="hud-card"><span>속도</span><strong id="level">1</strong></div>
+      <div class="hud-card next-card"><span>다음</span><canvas id="nextCanvas" width="112" height="112" aria-label="다음 블록"></canvas></div>
+    </section>
+
+    <section class="game-wrap">
+      <div class="board-frame">
+        <canvas id="gameCanvas" width="300" height="600" aria-label="테트리스 게임판"></canvas>
+        <div id="overlay" class="overlay hidden"><strong id="overlayTitle">게임 종료</strong><span id="overlayText">새 게임을 눌러 다시 시작하세요.</span></div>
+      </div>
+    </section>
+
+    <section class="touch-controls" aria-label="태블릿 조작 버튼">
+      <button id="leftBtn" class="control-btn move" type="button">←</button>
+      <button id="rotateBtn" class="control-btn rotate" type="button">⟳</button>
+      <button id="rightBtn" class="control-btn move" type="button">→</button>
+      <button id="downBtn" class="control-btn down" type="button">↓</button>
+      <button id="dropBtn" class="control-btn drop" type="button">⬇ 바로놓기</button>
+    </section>
+
+    <section class="actions">
+      <button id="startBtn" type="button">게임 시작</button>
+      <button id="pauseBtn" type="button">일시정지</button>
+      <button id="newGameBtn" type="button">새 게임</button>
+    </section>
+
+    <section class="rules">
+      <h2>조작 방법</h2>
+      <ul>
+        <li>컴퓨터: ← → 이동, ↑ 회전, ↓ 빠르게, Space 바로놓기</li>
+        <li>태블릿: 화면 아래 버튼으로 이동/회전/빠르게/바로놓기</li>
+      </ul>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>파이프 드림 2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <p class="eyebrow">평면도형의 이동 응용하기</p>
+      <h1>파이프 드림 2</h1>
+      <p class="description">
+        제한 시간 안에 파이프를 놓으세요. 시간이 끝나면 물이 자동으로 흐릅니다.
+        물이 정해진 시간 동안 끊기지 않고 계속 흐르면 성공입니다.
+      </p>
+    </section>
+
+    <section class="status-panel" aria-live="polite">
+      <div class="status-card">
+        <span class="label">상태</span>
+        <strong id="phaseLabel">준비</strong>
+      </div>
+      <div class="status-card">
+        <span class="label">시간</span>
+        <strong id="timer">-</strong>
+      </div>
+      <div class="status-card next-card">
+        <span class="label">다음 파이프</span>
+        <strong id="nextPipe">-</strong>
+      </div>
+    </section>
+
+    <canvas id="gameCanvas" width="384" height="384" aria-label="파이프 드림 게임판"></canvas>
+
+    <p id="message" class="message"></p>
+
+    <section class="controls">
+      <button id="newGameBtn" type="button">새 게임</button>
+    </section>
+
+    <section class="rules">
+      <h2>규칙</h2>
+      <ul>
+        <li>시작점 S에서 물이 오른쪽으로 흐르기 시작합니다.</li>
+        <li>빈 칸을 누르면 현재 표시된 파이프가 놓입니다.</li>
+        <li>이미 파이프가 있는 칸을 다시 누르면 기존 파이프가 깨지고 새 파이프로 바뀝니다.</li>
+        <li>물이 흐르기 시작하면 더 이상 파이프를 바꿀 수 없습니다.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
