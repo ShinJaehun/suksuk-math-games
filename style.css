@@ -42,6 +42,13 @@
     font-weight: 900;
     letter-spacing: 0.08em;
   }
+
+  .lead {
+    max-width: 42rem;
+    margin: 16px 0 0;
+    line-height: 1.7;
+    color: #555;
+  }
   
   h1 {
     margin: 0;
